@@ -5,60 +5,25 @@
                              http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <!-- Informasi Dasar Proyek -->
+    <!-- Identitas Proyek -->
     <groupId>com.example</groupId>
     <artifactId>java-maven-app</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>  <!-- atau 'war' untuk web app -->
+    <packaging>jar</packaging>  <!-- Ganti jadi 'war' untuk web app -->
 
-    <!-- Properti -->
+    <!-- Konfigurasi -->
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <!-- Dependensi -->
     <dependencies>
-        <!-- Contoh: JUnit untuk testing -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
-
-        <!-- Tambahkan dependensi lain sesuai kebutuhan -->
     </dependencies>
-
-    <!-- Plugin untuk Build -->
-    <build>
-        <plugins>
-            <!-- Plugin Kompiler Java -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
-                <configuration>
-                    <source>11</source>
-                    <target>11</target>
-                </configuration>
-            </plugin>
-
-            <!-- Plugin untuk Membuat JAR -->
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.2.2</version>
-                <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <mainClass>com.example.Main</mainClass>  <!-- Ganti dengan class utama -->
-                        </manifest>
-                    </archive>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
 </project>
